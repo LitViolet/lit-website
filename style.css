@@ -1,0 +1,237 @@
+/* 全域 body */
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  transition: background 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center; /* 預設置中 card */
+}
+
+/* 卡片容器 */
+.card {
+  width: 90%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 2rem auto; /* 上下間距自動調整 */
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+
+/* 當內容很多時，自動往上推以避免太靠底 */
+.section.active:has(.scrollable-content:only-child) {
+  align-self: flex-start;
+}
+
+/* 標籤列（便利貼風格） */
+.tab-bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.5);
+  padding-top: 0.5rem;
+  z-index: 10;
+  border-radius: 20px 20px 0 0;
+}
+
+/* 按鈕樣式 */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px 12px 0 0;
+  background-color: #fff;
+  color: #6a4c93;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* hover 動畫 */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 被選中 */
+.btn.active {
+  background-color: #9b79a4;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* icon */
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* 區塊 */
+.section {
+  display: none;
+}
+.section.active {
+  display: block;
+}
+
+/* 可滾動內容 */
+.scrollable-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* ====== 首頁專用樣式 ====== */
+.home-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* 頭像區 */
+.home-avatar {
+  flex: 0 0 auto;
+  width: 180px;
+  max-width: 40%;
+}
+.home-avatar img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.home-avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* 右側資訊 */
+.home-info {
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+}
+.home-info h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+.home-info p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 社群連結 */
+.social-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 0.8rem;
+}
+.social-links a svg {
+  width: 40px;
+  height: 40px;
+  color:rgb(155,121,164,0.6);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover svg {
+  transform: scale(1.2);
+  color:rgb(155,121,164);
+}
+/* 交好_左右欄能並排 */
+.friend-container {
+  display: flex;
+  justify-content: space-between; /* 左右分開 */
+  align-items: flex-start; /* 對齊上方 */
+  gap: 2rem; /* 中間留空隙 */
+}
+/* 交好_左 */
+.friend-left {
+  flex: 0 0 auto;
+  width: 40%;
+}
+.friend-left h1 {
+  color: #6a4c93;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+.friend-left p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 交好_右 */
+.friend-right {
+  flex: 1;
+  width: 60%;
+  position: relative;
+}
+.friend-right h1 {
+  color: #6a4c93;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+.friend-right p {
+  font-size: 1rem;
+  color: #333;
+}
+/* ====== 一般標題文字 ====== */
+h2 {
+  color: #6a4c93;
+  margin-top: 0;
+}
+
+h3 {
+  color: #6a4c93;
+  margin-top: 0;
+}
+
+p {
+  color: #333;
+  line-height: 1;
+}
+/* 自動縮放圖片 */
+.responsive-img {
+  width: 100%;       /* 滿寬自適應父容器 */
+  height: auto;      /* 高度依比例縮放 */
+  max-width: 600px;  /* 可選，避免太大 */
+  display: block;
+  margin: 1rem auto; /* 上下間距置中 */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover 動畫效果 */
+.responsive-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* 響應式 */
+@media (max-width: 768px) {
+  .card { width: 95%; padding: 1rem; margin: 1rem auto; }
+  .tab-bar { flex-wrap: wrap; justify-content: center; }
+  .btn { padding: 0.4rem 0.8rem; font-size: 0.85rem; }
+  .home-avatar { width: 140px; max-width: 60%; }
+  .home-info h1 { font-size: 1.4rem; }
+  .home-info p { font-size: 0.9rem; }
+  .friend-container { flex-direction: column; }
+}

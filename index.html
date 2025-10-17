@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>莉特的個人網站</title>
+
+  <!-- 網頁標籤圖示 (favicon) -->
+  <link rel="icon" type="image/png" href="image/favicon.png">
+
+  <!-- 網頁分享時的縮圖和描述 -->
+  <meta property="og:title" content="莉特的個人網站">
+  <meta property="og:description" content="這是莉特的個人網站，介紹 OC、動畫片單與自我介紹">
+  <meta property="og:image" content="image/bghome.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://litviolet.github.io/lit-website/">
+
+  <!-- Twitter Card (可選) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="莉特的個人網站">
+  <meta name="twitter:description" content="這是莉特的個人網站，介紹 OC、動畫片單與自我介紹">
+  <meta name="twitter:image" content="image/bghome.png">
+</head>
+<!-- ====== css ====== -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 卡片區 -->
+<div class="card">
+  <!-- 每個頁面最上方的標籤列 -->
+    <div class="tab-bar">
+        <button class="btn active" data-target="home">
+            <img src="image/home_icon.png" alt="home icon" class="btn-icon">主頁
+        </button>
+        <button class="btn" data-target="about">
+            <img src="image/about_icon02.png" alt="about icon" class="btn-icon">自介
+        </button>
+        <button class="btn" data-target="anime">
+            <img src="image/list_icon.png" alt="anime icon" class="btn-icon">片單
+        </button>
+        <button class="btn" data-target="oc-litt">
+            <img src="image/lit_icon02.png" alt="OC莉特 icon" class="btn-icon">莉特
+        </button>
+        <button class="btn" data-target="oc-sako">
+            <img src="image/sako_icon02.png" alt="OC紗骨 icon" class="btn-icon">紗骨
+        </button>
+        <button class="btn" data-target="friend">
+            <img src="image/friend_icon02.png" alt="friend icon" class="btn-icon">交友
+        </button>
+    </div>
+    <!-- ====== 主頁 ====== -->
+    <div class="section active" id="home">
+        <div class="section-content">
+            <div class="home-layout">
+                <!-- 左側圓形頭像 -->
+                <div class="home-avatar">
+                    <img src="image/lit_head_01.png" alt="莉特頭像">
+                </div>
+                <!-- 右側資訊 -->
+                <div class="home-info">
+                    <!-- 右上角社群連結 -->
+                    <div class="social-links">
+                    <a href="https://www.facebook.com/wei.er.li.te" target="_blank" title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.142v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/amethyst_ch0204?igsh=a3hxNDVvcnZ6M2li&utm_source=qr" target="_blank" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"></path></svg>
+                    </a>
+                    </div>
+                    <h1>莉特的個人網站</h1>
+                    <p>我是莉特特特特！</p>
+                    <p>因為不會用carrd，所以用魔法做了一個。</p>
+                    <p>希望背景圖片不會丟失...</p>
+                    <p>✨更新日期：2025/10/17✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== 自介 ====== -->
+    <section id="about" class="section">
+        <div class="scrollable-content">
+            <h2>About Lit</h2>
+            <p>name：維爾莉特 / 莉特 / 紫妍，隨意取，我知道你在叫我也ok！</p>
+            <p>生理女、20y↑是脆皮大學生</p>
+            <p>養原創oc&獵人oc</p>
+            <p>✨獵人：比司吉推不拒同擔嫁✨</p>
+            <p>自認好相處，想多多交友。喜歡到處留言，按❤️</p>
+            <p>覺得我和你距離太近請直說 👉👈</p>
+            <p>藝術能力趨近於0(努力緩慢學畫畫)</p>
+            <p>沒回≠討厭你，是通知被吃掉...</p>
+            <p>！努力營業中！</p>
+            <p>⭕️暗殺 ⭕️海巡 ⭕️私訊 ⭕️電話(熟一點)</p>
+            <p>⭕️中文 ⭕️散裝英文 🔺日本語を勉強中です</p>
+            <h2>I don't like</h2>
+            <p>無腦角色黑、直男叫我親暱稱呼、婉拒的夢向(彼多)、偷盜圖、拿我圖餵ai、雙面人、大眾雷</p>
+            <p>婉拒的夢向(獵人_彼多、大多數的官配)</p>
+            <h2>Maybe you don't like</h2>
+            <p>小黃臉：🤣🥹😆😅😂之類的</p>
+            <p>四處和人貼貼：可能 比較 沒有距離感 我很不好意思😅</p>
+            <p>全員推(非夢向)：</p>
+            <p>- 我超容易喜歡一部作品就全員都喜歡（再次強調非夢向，單純覺得每個角色都很好）</p>
+            <p>- 但是記憶力不好有些角色可能比較沒印象(會努力記住)</p>
+            <p>- 喜歡的作品會覺得裡面的每一個角色都很棒所以全員推</p>
+            <p>二次元濃度混雜：基本上什麼都看，看的種類混雜</p>
+            <p>喜歡一部作品卻不一定追原作：喜歡動漫卻不追小說or動漫、喜歡完結的作品，不喜歡追更新</p>
+            <p>記憶力不好：但我會努力記住大家~</p>
+        </div>
+    </section>
+    <!-- ====== 片單 ====== -->
+    <section id="anime" class="section">
+        <div class="scrollable-content">
+        <h2>深坑坑單</h2>
+        <p>名偵探柯南：每年必看電影、從小學會嗑cp的好地方</p>
+        <p>獵人(動漫)：大家都是好孩子，但婉拒彼多夢女…</p>
+        <p>七大罪（本傳）：官配夢女婉拒</p>
+        <p>櫻蘭高校：討厭春緋的人不要認識我</p>
+        <p>在伸展台上微笑：都村育人&藤戶千雪</p>
+        <p>排少：全推(非夢向)</p>
+        <p>能幹貓今天也憂鬱：請賜我一個諭吉</p>
+        <p>藥師少女的獨語：壬氏&貓貓</p>
+        <p>咒術迴戰(動漫)</p>
+        <p>我推的孩子：撇除爛尾…</p>
+        <p>地。-關於地球的運動-：抽空補漫畫中</p>
+        <img src="image/hackmd_anlist.png" alt="動漫清單" class="responsive-img">
+        </div>
+    </section>
+    <!-- ====== 莉特 ====== -->
+    <section id="oc-litt" class="section">
+        <div class="scrollable-content">
+            <h2>原創魔法世界觀OC介紹</h2>
+            <p>本名：維爾莉特·瓦奧萊特 </p>
+            <p>通稱：莉特</p>
+            <p>性別：女</p>
+            <p>職業：魔法鍛造師</p>
+            <p>性格：俏皮、溫柔、游刃有餘，面對一些事情會選擇迂迴戰術（裝笨）。</p>
+            <p>憧憬：自由</p>
+            <p>戀愛對象：早風やなぎ</p>
+            <p>也就是背景圖的某隻狐狸</p>
+            <p>🔽點圖片解鎖更多：notion網站持續完善中🔽</p>
+            <!-- 可點擊圖片 -->
+            <a href="https://www.notion.so/231f937b3b8f80609be3c130e389e705?source=copy_link" target="_blank">
+                <img src="image/lit01.png" alt="About Lit Image" class="responsive-img">
+            </a>
+        </div>
+    </section>
+    <!-- ====== 紗骨 ====== -->
+        <section id="oc-sako" class="section">
+        <div class="scrollable-content">
+            <h2>HUNTER×HUNTER的個人向oc</h2>
+            <p>本名：紗骨·維萊塔</p>
+            <p>日文：サコ・ヴィレッタ</p>
+            <p>字母拼寫：Sako • Villetta</p>
+            <p>性別：女 </p>
+            <p>年齡：20y </p>
+            <p>個人向說明：會與劇中角色有交集，皆非愛情向</p>
+            <p>偏愛比司吉：會出現紗骨與比司吉的貼貼圖</p>
+            <h3>牽線</h3>
+            <p>- 千柚黎｜西索·莫羅｜童年組</p>
+            <p>🔽點圖片解鎖更多：notion網站持續完善中🔽</p>
+            <!-- 可點擊圖片 -->
+            <a href="https://www.notion.so/21af937b3b8f80b69acbf8fa38c05868?source=copy_link" target="_blank">
+                <img src="image/sako01.JPG" alt="About Sako Image" class="responsive-img">
+            </a>
+        </div>
+    </section>
+    <!-- ====== 交友 ====== -->
+    <section id="friend" class="section">
+        <div class="scrollable-content">
+            <h2>定義：</h2>
+            <p> 偏愛：很喜歡他/他家</p>
+            <p> 交好：常在留言區互動 / 會出現在主頁之中。</p>
+            <p> 雙面捧：官配99、小情侶鎖死</p>
+            <p> 夢向相關互動方式：分享貼文在限動（但我常常忘記）所以其實我不常分享👉👈我很抱歉我的友列們</p>
+            <h3> 目前決定不幫拒不幫鎖，麻煩大家自行封鎖謝謝!</h3>
+            <p> 友列其實夢向沒怎麼撞到</p>
+            <p> 列出來的原因：偷偷表白喜歡的夢向，以及怕有人被創到...</p>
+            <div class="friend-container">
+                <!-- 左側 -->
+                <div class="friend-left">
+                    <h1>友列</h1>
+                    <p>小星｜曖昧組</p>
+                    <p>雪貂｜愛ㄚ愛ㄚ</p>
+                    <p>珞奈｜維珞山丘</p>
+                    <p>梳子｜梳莉特髮</p>
+                    <p>西柚｜西柚冰紗</p>
+                    <p>冬冬｜讀心之音</p>
+                    <p>小閻｜夏日閻妍</p>
+                    <p>一一｜狸花莉莉特</p>
+                </div>
+                <!-- 右側 -->
+                <div class="friend-right">
+                    <!-- 右上角社群連結 -->
+                    <h1>夢向</h1>
+                    <p>夢向分類僅將深坑部分單獨寫出來，乙遊太容易撞所以也拉出來寫了</p>
+                    <p>✦名偵探柯南：</p>
+                    <p>💫諸伏高明</p>
+                    <p>✦獵人：</p>
+                    <p>💫西索、雷歐力、酷拉皮卡</p>
+                    <p>✦排少：</p>
+                    <p>💫影山飛雄、及川徹</p>
+                    <p>✦我推的孩子：</p>
+                    <p>💫黑川茜</p>
+                    <p>✦著名乙遊：</p>
+                    <p>💫秦徹</p>
+                    <p>✦其他IP：</p>
+                    <p>💫潔世一、チョロ松、愛麗速子、櫻遙、翠石伊織、里蘇特涅羅、爆豪勝己、中原中也、芥川龍之介</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- ====== js ====== -->
+<script src="script.js"></script>
+</body>
+</html>
