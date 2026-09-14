@@ -130,13 +130,111 @@
         .tag-cloud span { background: #fff; border: 1px solid #e0d0e0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; }
         .update-date { color: #888; font-size: 0.9rem; margin-top: 10px; }
         
-        .oc-flex-container { display: flex; gap: 15px; margin-bottom: 20px; }
-        .oc-box { flex: 1; padding: 15px; border-radius: 15px; border: 2px solid; }
-        .lit-theme { background: var(--lit-purple); border-color: #d1c4e9; color: #4a148c; }
-        .yana-theme { background: var(--yana-blue); border-color: #0d47a1; color: var(--yana-text); } /* 使用深色字體 */
+        /* 甜蜜情侶 OC 區塊樣式 */
+        .couple-subtitle {
+            font-size: 0.9rem;
+            color: #887898;
+            margin: -5px 0 15px 0;
+        }
+
+        .couple-cards-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .oc-card {
+            flex: 1;
+            min-width: 0;
+            padding: 20px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .oc-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .oc-card.lit {
+            background: linear-gradient(135deg, #fcf6f9 0%, #f3e9f1 100%);
+            border: 1px solid #ebdbe6;
+        }
+
+        .oc-card.yana {
+            background: linear-gradient(135deg, #f4f7fb 0%, #e6edf6 100%);
+            border: 1px solid #d5e1f0;
+        }
+
+        .oc-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .oc-card.lit .oc-tag {
+            background: #e8d4e4;
+            color: #7b4f73;
+        }
+
+        .oc-card.yana .oc-tag {
+            background: #d4e2f0;
+            color: #3f668c;
+        }
+
+        .oc-info h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.15rem;
+            color: #2c2533;
+        }
+
+        .nickname {
+            font-size: 0.9rem;
+            color: #554a63;
+            margin: 0 0 10px 0;
+        }
+
+        .nickname span {
+            font-size: 0.75rem;
+            color: #9c8da8;
+            margin-right: 4px;
+        }
+
+        .desc {
+            font-size: 0.82rem;
+            color: #6b5d7a;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .couple-heart-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            flex-shrink: 0;
+        }
+
+        .heart-icon {
+            font-size: 1.3rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
         .oc-external-img { text-align: center; }
-        .oc-external-img img { max-width: 100%; border-radius: 15px; margin-top: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .click-hint { color: var(--secondary-color); font-size: 0.85rem; margin-top: 5px; }
+        .oc-external-img img { max-width: 100%; border-radius: 15px; margin-top: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .click-hint { color: var(--secondary-color); font-size: 0.85rem; margin-top: 8px; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -144,7 +242,8 @@
             .home-layout { flex-direction: column; text-align: center; }
             .home-avatar-container { width: 60%; margin-bottom: 20px; }
             .home-social-container { justify-content: center; }
-            .oc-flex-container { flex-direction: column; }
+            .couple-cards-container { flex-direction: column; }
+            .couple-heart-divider { width: 100%; margin: -4px 0; }
             .grid-layout { grid-template-columns: 1fr; }
             .card { width: 95%; }
         }
@@ -170,15 +269,15 @@
                     </div>
                     <div class="home-info">
                         <h1>莉特的個人網站</h1>
-                        <p>我是莉特！是一名鍛造師 ✨</p>
-                        <p>因為不會用 Carrd，所以用萊克索做了一個。</p>
-                        <p class="update-date">📅 更新日期：2026/08/21</p>
+                        <p>我是莉特！魔法鍛造師 ✨</p>
+                        <p>因為不會用 Carrd，所以用魔法做了一個。</p>
+                        <p class="update-date">📅 更新日期：2026/09/15</p>
                         
                         <div class="home-social-container">
                             <a href="https://www.facebook.com/share/1FNWuzMoLg/?mibextid=wwXIfr" target="_blank" class="social-icon-btn fb" title="Facebook">
                                 <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.142v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
                             </a>
-                            <a href="https://www.instagram.com/lit.violet_yana?igsh=MWljMWxlbnZ3Y2x2cw%3D%3D&utm_source=qr" target="_blank" class="social-icon-btn ig" title="Instagram">
+                            <a href="https://www.instagram.com/amethyst_ch0204?igsh=a3hxNDVvcnZ6M2li&utm_source=qr" target="_blank" class="social-icon-btn ig" title="Instagram">
                                 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
                             </a>
                         </div>
@@ -190,11 +289,11 @@
         <section id="about" class="section">
             <div class="scroll-area">
                 <h2 class="title-decorator">About Lit</h2>
-                <p>維爾莉特 / 莉特 | 生理女 | 20y↑脆皮大學生</p>
-                <p>身分認同：亞納的女朋友</p>
+                <p>維爾莉特 / 莉特 | 生理女、20y↑脆皮大學生</p>
+                <p>身分認同：原創夢女</p>
                 <p>✨ 獵人：比司吉推（不拒同擔夢擔）✨</p>
                 <div class="tag-container">
-                    <span class="tag">⭕️ 暗殺</span><span class="tag">⭕️ 海巡</span><span class="tag">⭕️ 私訊</span><span class="tag">⭕️ 帶自介直戳</span><span class="tag">❌ 喊我本名</span><span class="tag">❌ 拒列外未成年（多個共友視情況過友邀）</span>
+                    <span class="tag">⭕️ 暗殺</span><span class="tag">⭕️ 海巡</span><span class="tag">⭕️ 私訊</span><span class="tag">❌ 喊我本名</span>
                 </div>
                 <h2 class="title-decorator">Page Layout</h2>
                 <ul class="list-style">
@@ -212,7 +311,7 @@
                 <h2 class="title-decorator">我的專屬片單</h2>
                 <h3 class="category-title">🔥 近期深坑</h3>
                 <div class="highlight-box">
-                    <p>獵人(動漫) / 在伸展台上微笑 / 排少 / 間諜家家酒 / 能幹貓今天也憂鬱</p>
+                    <p>名偵探柯南 / 獵人(動漫) / 七大罪（本傳）/ 在伸展台上微笑 / 排少 / 間諜家家酒 / 能幹貓今天也憂鬱</p>
                 </div>
                 <div class="grid-layout">
                     <div class="grid-item">
@@ -230,33 +329,45 @@
                 </div>
                 <h3 class="category-title">📺 口袋名單</h3>
                 <div class="tag-cloud">
-                    <span>進巨</span><span>俺物語</span><span>膽大黨</span><span>怪獸8號</span><span>防風少年</span><span>虛構推理</span><span>文豪野犬</span><span>詐騙之王</span><span>Dr.Stone</span><span>火影忍者</span><span>少女戰記</span><span>莉可莉絲</span><span>堀與宮村</span><span>惡魔奶爸</span><span>學園奶爸</span><span>Overlord</span><span>狂賭之淵</span><span>躍動青春</span><span>名偵探柯南</span></span><span>我推的孩子</span><span>雙星之陰陽師</span><span>Fairytail</span><span>鄰人似銀河</span><span>戀上換裝娃娃</span><span>New game</span><span>葬送的芙莉蓮</span><span>轉生史萊姆</span><span>藥師少女的獨語</span><span>地縛少年花子君</span><span>四月是你的謊言</span><span>大正少女御伽話</span><span>天地創造設計部</span><span>小木乃伊來我家</span><span>小林家的龍女僕</span><span>入間同學入魔了</span><span>熊熊勇闖異世界</span><span>里亞綠德大地</span><span>憂國的莫里雅蒂</span><span>地球外少男少女</span><span>元氣少女緣結神</span><span>小太郎一個人生活</span><span>科學超電磁泡</span><span>聖女魔力無所不能</span><span>老夫老妻重返青春</span><span>不死少女的謀殺鬧劇</span><span>參加聯誼沒有一個女生</span><span>轉生女性像壞人大小姐</span><span>地。-關於地球的運動-</span>
+                    <span>進巨</span><span>俺物語</span><span>膽大黨</span><span>怪獸8號</span><span>防風少年</span><span>虛構推理</span><span>文豪野犬</span><span>詐騙之王</span><span>Dr.Stone</span><span>火影忍者</span><span>少女戰記</span><span>莉可莉絲</span><span>堀與宮村</span><span>惡魔奶爸</span><span>學園奶爸</span><span>Overlord</span><span>狂賭之淵</span><span>躍動青春</span><span>我推的孩子</span><span>雙星之陰陽師</span><span>Fairytail</span><span>鄰人似銀河</span><span>戀上換裝娃娃</span><span>New game</span><span>葬送的芙莉蓮</span><span>轉生史萊姆</span><span>藥師少女的獨語</span><span>地縛少年花子君</span><span>四月是你的謊言</span><span>大正少女御伽話</span><span>天地創造設計部</span><span>小木乃伊來我家</span><span>小林家的龍女僕</span><span>入間同學入魔了</span><span>熊熊勇闖異世界</span><span>里亞綠德大地</span><span>憂國的莫里雅蒂</span><span>地球外少男少女</span><span>元氣少女緣結神</span><span>小太郎一個人生活</span><span>科學超電磁泡</span><span>聖女魔力無所不能</span><span>老夫老妻重返青春</span><span>不死少女的謀殺鬧劇</span><span>參加聯誼沒有一個女生</span><span>轉生女性像壞人大小姐</span><span>地。-關於地球的運動-</span>
                 </div>
             </div>
         </section>
 
         <section id="oc-litt" class="section">
             <div class="scroll-area">
-                <h2 class="title-decorator">原創 OC 介紹</h2>
-                <div class="oc-flex-container">
-                    <div class="oc-box lit-theme">
-                        <h3>oc/自設</h3>
-                        <p>本名：維爾莉特·瓦奧萊特</p>
-                        <p>通稱：莉特</p>
-                        <p>性別：女</p>
+                <h2 class="title-decorator">Our Story_OC</h2>
+                <p class="couple-subtitle">把屬於我們的小世界記錄在這</p>
+                
+                <div class="couple-cards-container">
+                    <div class="oc-card lit">
+                        <div class="oc-tag">Self / OC</div>
+                        <div class="oc-info">
+                            <h3>維爾莉特 · 瓦奧萊特</h3>
+                            <p class="nickname"><span>暱稱</span> 莉特</p>
+                            <p class="desc">「只要你在身邊，日常就會變得很有意義。」</p>
+                        </div>
                     </div>
-                    <div class="oc-box yana-theme">
-                        <h3>oc</h3>
-                        <p>本名：亞納里斯·里納維爾</p>
-                        <p>通稱：亞納里斯</p>
-                        <p>性別：男</p>
+
+                    <div class="couple-heart-divider">
+                        <span class="heart-icon">💜</span>
+                    </div>
+
+                    <div class="oc-card yana">
+                        <div class="oc-tag">OC</div>
+                        <div class="oc-info">
+                            <h3>亞納里斯 · 里納維爾</h3>
+                            <p class="nickname"><span>暱稱</span> 亞納</p>
+                            <p class="desc">「我的視線所及之處，全部都是妳的身影。」</p>
+                        </div>
                     </div>
                 </div>
+
                 <div class="oc-external-img">
-                    <a href="https://litviolet.github.io/yanarius-violet/" target="_blank">
-                        <img src="https://raw.githubusercontent.com/LitViolet/lit-website/main/image/couple01.png" alt="OC形象圖">
+                    <a href="https://litviolet.github.io/vworld/" target="_blank">
+                        <img src="https://raw.githubusercontent.com/LitViolet/lit-website/main/image/雙人dance01_z.png" alt="OC形象圖">
                     </a>
-                    <p class="click-hint">點圖片跳轉網站（網站緩慢更新中）</p>
+                    <p class="click-hint">點圖片跳轉網站</p>
                 </div>
             </div>
         </section>
@@ -266,9 +377,9 @@
                 <h2 class="title-decorator">May be you don't like：</h2>
                 <p>二次元濃度混雜 / 喜歡到處留言、按心 / 記憶力不好 / 小黃臉 / 全員推 / 開玩笑和友列說要一起私奔</p>
                 <h2 class="title-decorator">I don't like：</h2>
-                <p>大眾雷、偷盜圖、未經允許餵 AI、無腦角色黑、雙面人</p>
+                <p>大眾雷、偷盜圖、未經允許餵 AI、無腦角色黑</p>
                 <h2 class="title-decorator">關於夢圈：</h2>
-                <p>夢圈紛紛擾擾與我無關，原創夢自嗨為主。交好偏愛放心裡，有撞到會告知，默認列內有你同擔嫁。</p>
+                <p>原創夢自嗨為主，交好偏愛放心裡，有撞到會告知，默認列內有你同擔嫁。</p>
             </div>
         </section>
     </div>
@@ -295,8 +406,6 @@
                     if (scrollArea) scrollArea.scrollTop = 0;
                 }
             });
-
-            // 背景已改為統一，不再由 JavaScript 動態切換背景色
         });
     });
 </script>
